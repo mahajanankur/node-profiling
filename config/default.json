@@ -1,0 +1,31 @@
+{
+    "server": {
+        "baseContext": "http://development.com:3333/api",
+        "port": "3333",
+        "profile": "development",
+        "uiContext": "http://development.com"
+    },
+    "authentication": {
+        "authEnabled": true,
+        "userIdHeader": "USER",
+        "userEmailHeader": "EMAIL",
+        "jwt": {
+            "salt": "$$devlopment$$",
+            "expiresIn": 24,
+            "postfix": "h"
+        }
+    },
+    "bcrypt": {
+        "saltRounds": 10
+    },
+    "notifications": {
+        "email": {
+            "from": "'Development' <development@gmail.com>",
+            "host": "development.org",
+            "port": 465,
+            "secure": true,
+            "user": "development@gmail.com",
+            "password": "development"
+        }
+    }
+}

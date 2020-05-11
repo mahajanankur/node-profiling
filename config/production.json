@@ -1,0 +1,31 @@
+{
+    "server": {
+        "baseContext": "https://production.org/api",
+        "port": "8780",
+        "profile": "production",
+        "uiContext": "https://production.org"
+    },
+    "authentication": {
+        "authEnabled": true,
+        "userIdHeader": "USER",
+        "userEmailHeader": "EMAIL",
+        "jwt": {
+            "salt": "$$$$prodction$$",
+            "expiresIn": 30,
+            "postfix": "m"
+        }
+    },
+    "bcrypt": {
+        "saltRounds": 10
+    },
+    "notifications": {
+        "email": {
+            "from": "'Production' <no-reply@production.org>",
+            "host": "production.org",
+            "port": 465,
+            "secure": true,
+            "user": "no-reply@production.org",
+            "password": "production"
+        }
+    }
+}
